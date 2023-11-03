@@ -1,0 +1,25 @@
+@import '../../../variables.scss';
+
+.side-bar-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 22rem;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: $light-gray;
+
+  box-sizing: border-box;
+  padding: 24px 16px;
+}
+
+.side-bar-logo {
+  width: 100%;
+
+  svg {
+    width: 100%;
+  }
+}

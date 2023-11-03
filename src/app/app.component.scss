@@ -1,0 +1,184 @@
+@import '../variables.scss';
+
+.main-wrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 10rem;
+
+  width: calc(100% - 22rem);
+  height: 100vh;
+  margin-left: 22rem;
+
+  box-sizing: border-box;
+  padding: 1.5rem;
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 1.5rem;
+    width: 100%;
+    height: fit-content;
+    margin-left: 0;
+    margin-top: 10rem;
+  }
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-wrapper {
+  width: 100%;
+  background-color: white;
+
+  box-sizing: border-box;
+  padding: 0.75rem;
+
+  border: solid 1px $siemens-green;
+  border-radius: $rounded-md;
+  box-shadow: 5px 10px $siemens-green;
+}
+
+.form-field-wrapper {
+  display: flex;
+
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: $tablet) {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.form-label {
+  width: 8rem;
+
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.form-input {
+  font-size: 1rem;
+  font-weight: 300;
+
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:focus {
+    border-bottom: 1px solid $siemens-green;
+  }
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  background-color: transparent;
+
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
+
+  border: solid 1px $siemens-green;
+  border-radius: 0.375rem;;
+
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 0;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:hover {
+    background-color: $siemens-green;
+    color: white;
+  }
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  margin-top: 2rem;
+  background-color: white;
+
+  box-sizing: border-box;
+  padding: 0.75rem;
+
+  border: solid 1px $siemens-green;
+  border-radius: $rounded-md;
+  box-shadow: 5px 10px $siemens-green;
+}
+
+.table-header {
+  display: flex;
+
+  width: 100%;
+
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.table-body {
+  width: 100%;
+  height: 100%;
+
+  overflow-y: scroll;
+}
+
+.table-row {
+  display: flex;
+
+  width: 100%;
+}
+
+.table-item {
+  display: flex;
+  gap: 1rem;
+
+  width: 25%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  box-sizing: border-box;
+  padding: 0.6rem;
+
+  border-bottom: 1px solid black;
+
+  &.point {
+    width: 20%;
+  }
+}
+
+.table-action {
+  font-size: 1rem;
+
+  border:none;
+  background-color: transparent;
+
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &.edit:hover {
+    color: $siemens-green;
+  }
+
+  &.delete:hover {
+    color: red;
+  }
+}

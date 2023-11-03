@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E6E6E6;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+button {
+  cursor: pointer;
+}

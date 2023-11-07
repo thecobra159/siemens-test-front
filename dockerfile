@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY . .
 RUN yarn install
-RUN yarn run build --configuration=development
+RUN yarn run build
 
 # Serve Application using Nginx Server
 FROM nginx:alpine
